@@ -14,17 +14,17 @@ body{
 }
 .road{
     position: absolute;
-    bottom: -42vh;
-    height: 100vh;
+    bottom: 0;
+    height: 200px;
     width: 100vw;
     background-color: grey;
-    transform: rotateX(100deg);
+    /* transform: rotateX(100deg); */
 }
 
 .stripes{
     position: relative;
     top: 50%;
-    height: 20px;
+    height: 5px;
     background-color: white;
     z-index: 10;
     /* width: 30px; */
@@ -32,27 +32,27 @@ body{
 
 .car-container{
     position: relative;
-    bottom: -90%;
+    bottom: 0%;
     animation: moveCar 10s infinite linear;
 }
 
 .car{
     position: absolute;
-    width: 150px;
+    width: 130px;
     /* height: 250px; */
-    transform: rotateX(180deg) scaleY(4);
+    transform: scaleY(2);
     z-index: 15;
 }
 .wheel{
     position: absolute;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    top: -10px;
+    width: 30px;
+    height: 40px;
+    top: 45px;
     animation: spin 1s infinite linear;
 }
 .front-wheel{
-    left: 102px;
+    left: 85px;
 }
 .back-wheel{
     left: 8px;
