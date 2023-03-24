@@ -6,43 +6,49 @@ const lightEl = document.querySelector('.light')
 
 let currentLight = 'R'
 
-setInterval(() => {
-    if(currentLight === 'R'){
+function changeLightColor() {
+    if (currentLight === 'R') {
         lightEl.style.backgroundColor = 'red'
-    } else if( currentLight === 'W'){
+    } else if (currentLight === 'W') {
         lightEl.style.backgroundColor = 'yellow'
-    } else{
+    } else {
         lightEl.style.backgroundColor = 'green'
     }
-}, 100)
+}
 
-setInterval( () => {
-    if(currentLight === 'R'){
+function changeLight() {
+    if (currentLight === 'R') {
         currentLight = 'W'
-        return 
-    } 
-    if( currentLight === 'W'){
-        currentLight = 'G'
-        return 
+        return
     }
-    if(currentLight === 'G'){
+    if (currentLight === 'W') {
+        currentLight = 'G'
+        return
+    }
+    if (currentLight === 'G') {
         currentLight = 'R'
     }
-}, 5000)
 
+}
 
-setInterval( () => {
-    if( Math.abs(checkPointEl.offsetLeft - (carEl.offsetLeft + 50)) <= 50 ){
-        if(currentLight === 'R' || currentLight === 'W'){
+function moveCar() {
+    if (Math.abs(checkPointEl.offsetLeft - (carEl.offsetLeft + 50)) <= 50) {
+        if (currentLight === 'R' || currentLight === 'W') {
             carEl.classList.add('animation-pause')
             wheelEl.forEach(wheel => wheel.classList.add('animation-pause'))
         }
     }
 
-        if(currentLight === 'G'){
-            carEl.classList.remove('animation-pause')
-            wheelEl.forEach(wheel => wheel.classList.remove('animation-pause'))
-        }
+    if (currentLight === 'G') {
+        carEl.classList.remove('animation-pause')
+        wheelEl.forEach(wheel => wheel.classList.remove('animation-pause'))
+    }
+}
 
-}, 100)
+
+setInterval(changeLightColor, 100)
+
+setInterval(changeLight, 5000)
+
+setInterval(moveCar ,100)
 

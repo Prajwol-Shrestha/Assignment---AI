@@ -71,13 +71,10 @@ img{
 .car{
     position: absolute;
     width: 130px;
-    /* height: 250px; */
     transform: scaleY(2);
     z-index: 15;
 }
-/* .animation-play{
-    animation-play-state: play;
-} */
+
 .animation-pause{
     animation-play-state: paused !important;
 }
