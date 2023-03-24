@@ -44,22 +44,27 @@ img{
 }
 
 .checkpoint{
-    position: relative;
+    position: absolute;
     transform: rotate(90deg);
     height: 5px;
-    width: 31vh;
+    width: 15vh;
+    bottom: 78%;
     left: min(550px, 50vw);
     background-color: white;
     z-index: 10;
 }
 
-.stripes{
+.stripes-container{
     position: relative;
     top: 50%;
-    height: 5px;
-    background-color: white;
+    display: flex;
+    gap: 2em;
+}
+.stripes{
+    width: 10vw;
     z-index: 10;
-    /* width: 30px; */
+    background-color: white;
+    height: 5px;
 }
 
 .car-container{

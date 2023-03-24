@@ -2,6 +2,7 @@ const checkPointEl = document.querySelector('.checkpoint')
 const carEl = document.querySelector('.car-container')
 const wheelEl = document.querySelectorAll('.wheel')
 const lightEl = document.querySelector('.light')
+const stripesContEl = document.querySelector('.stripes-container') 
 
 
 let currentLight = 'R'
@@ -45,10 +46,22 @@ function moveCar() {
     }
 }
 
+function addStripes(){
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    let stripesNum = Math.floor(vw/90)
+    for (let i = 0; i < stripesNum; i++) {
+        let stripes = document.createElement('div')
+        stripes.className = 'stripes'
+        stripesContEl.appendChild(stripes)
+      }
+}
+
+addStripes()
+
 
 setInterval(changeLightColor, 100)
 
 setInterval(changeLight, 5000)
 
-setInterval(moveCar ,100)
+setInterval(moveCar ,10)
 
