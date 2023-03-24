@@ -59,9 +59,10 @@ img{
     top: 50%;
     display: flex;
     gap: 2em;
+    overflow: hidden;
 }
 .stripes{
-    width: 10vw;
+    min-width: min(50px, 10vw);
     z-index: 10;
     background-color: white;
     height: 5px;

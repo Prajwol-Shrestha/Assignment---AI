@@ -49,7 +49,7 @@ function moveCar() {
 function addStripes(){
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     let stripesNum = Math.floor(vw/90)
-    for (let i = 0; i < stripesNum; i++) {
+    for (let i = 0; i < stripesNum + 5; i++) {
         let stripes = document.createElement('div')
         stripes.className = 'stripes'
         stripesContEl.appendChild(stripes)
