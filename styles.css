@@ -16,12 +16,21 @@ img{
     overflow: hidden;
 }
 
+.light{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
 .traffic-light{
     width: 10em;
     height: 15em;
     position: absolute;
     top: 40vh;
-    right: 30vw;
+    left: min(600px, 60vw);
 }
 
 
@@ -39,7 +48,7 @@ img{
     transform: rotate(90deg);
     height: 5px;
     width: 31vh;
-    left: 50vw;
+    left: min(550px, 50vw);
     background-color: white;
     z-index: 10;
 }
@@ -66,6 +75,13 @@ img{
     transform: scaleY(2);
     z-index: 15;
 }
+/* .animation-play{
+    animation-play-state: play;
+} */
+.animation-pause{
+    animation-play-state: paused !important;
+}
+
 .wheel{
     position: absolute;
     border-radius: 50%;
